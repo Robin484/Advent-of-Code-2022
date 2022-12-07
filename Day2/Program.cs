@@ -30,16 +30,21 @@ namespace Day2
             Console.WriteLine("Day 2: Rock Paper Scissors");
 
             Console.WriteLine("Part 1:");
-            Console.WriteLine($"Test: {GetPart1Results("test").Sum()} ({string.Join(" + ", GetPart1Results("test"))})");
-            Console.WriteLine($"Answer: {GetPart1Results("input").Sum()}");
+            Console.WriteLine($"Test: {GetPart1Results("test.txt").Sum()} ({string.Join(" + ", GetPart1Results("test.txt"))})");
+            Console.WriteLine($"Answer: {GetPart1Results("input.txt").Sum()}");
 
             Console.WriteLine();
 
             Console.WriteLine("Part 2:");
-            Console.WriteLine($"Test: {GetPart2Score("test")}");
-            Console.WriteLine($"Answer: {GetPart2Score("input")}");
+            Console.WriteLine($"Test: {GetPart2Score("test.txt")}");
+            Console.WriteLine($"Answer: {GetPart2Score("input.txt")}");
         }
 
+        /// <summary>
+        /// Convert a character into a Shape (Rock/Paper/Scissors)
+        /// </summary>
+        /// <param name="shape">Character representing a shape</param>
+        /// <returns>Shape</returns>
         static Shape GetShape(string shape)
         {
             switch(shape)
@@ -58,6 +63,11 @@ namespace Day2
             }
         }
 
+        /// <summary>
+        /// Convert a character into a Result (Loss/Draw/Win)
+        /// </summary>
+        /// <param name="result">Character representing the result</param>
+        /// <returns>Result</returns>
         static Result GetResult(string result)
         {
             switch (result)
@@ -73,6 +83,11 @@ namespace Day2
             }
         }
 
+        /// <summary>
+        /// Get the results for Part1
+        /// </summary>
+        /// <param name="file">File</param>
+        /// <returns>Result of each game</returns>
         static List<int> GetPart1Results(string file)
         {
             List<int> results = new List<int>();
@@ -150,6 +165,11 @@ namespace Day2
             return results;
         }
 
+        /// <summary>
+        /// Get the results for Part 2
+        /// </summary>
+        /// <param name="file">File</param>
+        /// <returns>Get the total score</returns>
         static int GetPart2Score(string file)
         {
             int finalScore = 0;

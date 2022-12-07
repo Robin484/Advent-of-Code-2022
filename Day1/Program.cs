@@ -14,13 +14,13 @@ namespace Day1
             Console.WriteLine();
 
             Console.WriteLine("Part 1:");
-            Console.WriteLine($"Test data most calories: {CountCalories("test").Max()}");
-            Console.WriteLine($"Most calories: {CountCalories("input").Max()}");
+            Console.WriteLine($"Test data most calories: {CountCalories("test.txt").Max()}");
+            Console.WriteLine($"Most calories: {CountCalories("input.txt").Max()}");
 
             Console.WriteLine();
             Console.WriteLine("Part 2:");
-            Console.WriteLine($"Test answer: {CountCalories("test", 3)}");
-            Console.WriteLine($"Answer: {CountCalories("input", 3)}");
+            Console.WriteLine($"Test answer: {CountCalories("test.txt", 3)}");
+            Console.WriteLine($"Answer: {CountCalories("input.txt", 3)}");
         }
 
         /// <summary>

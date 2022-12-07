@@ -13,15 +13,20 @@ namespace Day3
             Console.WriteLine();
 
             Console.WriteLine("Part 1:");
-            Console.WriteLine($"Test: {string.Join(", ", ProcessRucksacks("test"))} = {ProcessRucksacks("test").Sum()}");
-            Console.WriteLine($"Answer: {ProcessRucksacks("input").Sum()}");
+            Console.WriteLine($"Test: {string.Join(", ", ProcessRucksacks("test.txt"))} = {ProcessRucksacks("test.txt").Sum()}");
+            Console.WriteLine($"Answer: {ProcessRucksacks("input.txt").Sum()}");
             Console.WriteLine();
 
             Console.WriteLine("Part 2:");
-            Console.WriteLine($"Test: {CalculateBadgePriority("test")}");
-            Console.WriteLine($"Answer: {CalculateBadgePriority("input")}");
+            Console.WriteLine($"Test: {CalculateBadgePriority("test.txt")}");
+            Console.WriteLine($"Answer: {CalculateBadgePriority("input.txt")}");
         }
 
+        /// <summary>
+        /// Process the contents of the rucksacks
+        /// </summary>
+        /// <param name="file">File</param>
+        /// <returns></returns>
         static List<int> ProcessRucksacks(string file)
         {
             List<int> results = new List<int>();
